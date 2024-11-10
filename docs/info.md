@@ -9,12 +9,18 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The first 4 inputs are 2 two-digit binary inputs. The MSB of each input is at IN0 and IN2, respectively. These are added together into a three-digit binary output that is displayed as the first 3 vertical lines of the seven segment display - specifically, segments f, b, and e, where segment f is the MSB of the output.
+
+Additionally, there is a (2^16)x clock divider from 10kHz that turns DP on and off.
 
 ## How to test
 
-Explain how to use your project
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Enabling the below inputs should result in the following ouput:
+| IN0 | IN1 | IN2 | IN3 | F | B | E |
+|-----|-----|-----|-----|---|---|---|
+| 0   | 0   | 0   | 0   | 0 | 0 | 0 |
+| 0   | 1   | 0   | 0   | 0 | 0 | 1 |
+| 1   | 0   | 0   | 0   | 0 | 1 | 0 |
+| 0   | 0   | 1   | 1   | 0 | 1 | 1 |
+| 1   | 1   | 0   | 1   | 1 | 0 | 0 |
+| 1   | 1   | 1   | 1   | 1 | 1 | 0 |
